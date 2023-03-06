@@ -1,44 +1,24 @@
-<!-- Create a 2-Player math game where players take turns to answer simple math addition problems. A new math question is generated for each turn by picking two numbers between 1 and 20. The player whose turn it is is prompted the question and must answer correctly or lose a life. -->
 
-# 
+# TwO-O-Player Math Game
 
-Details
-Both players start with 3 lives. They lose a life if they mis-answer a question. At the end of every turn, the game should output the new scores for both players, so players know where they stand.
+## Description
+Simple game to practice Object Oriented Programming in Ruby. Both players start with 3 lives. They lose a life if they mis-answer a question. At the end of every turn, the game should output the new scores for both players, so players know where they stand.
 
 The game doesn’t end until one of the players loses all their lives. At this point, the game should announce who won and what the other player’s score is.
 
-players
-  attributes: :name, :score, :lives
 
-  def initialize(name)
-    @name = name
-    @score = 0
-    @lives = 3
-  end
+# Planning
 
-role: keep track of all the players names, games won/lost, how many lives they have left
-  methods
-  increase_score()
-  decrease_life()
+Class: Player
+- Role: keep track of all the players names, games won/lost, how many lives they have left
+- attributes: :name, :score, :lives
+- methods: increase_score(), decrease_life()
 
+Class: Game
+- role: Keep track of which players turn it is, who the - - attributes  :player1, :player2, :current_player
+- methods: change_player, new_question, start_game, end_game
 
-games
-attributes  :player1, :player2, :current_player
-role: Keep track of which players turn it is, who the players in the game are, player scores (correct answers)
+# Getting Started
 
-  def initialize(player1, player2)
-    @current_player = player1
-    @player1 = player1
-    @player2 = player2
-  end
-
---method generate_question(num1, num2) ? (takes user input, check if it matches num1 + num2)   /// Syntax rand(first...second) // returns true if the player got the asnwer correct, false if it was incorrect
---start_game() // starts the loop to 
---
-
-questions - maybe just a method?
--could be an array of objects
-role: 
-- A new math question is generated for each turn by picking two numbers between 1 and 20.
---
-
+- clone the repo
+- run from the project folder `ruby main.rb`
