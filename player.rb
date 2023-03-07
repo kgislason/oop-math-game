@@ -10,15 +10,10 @@ class Player
 
   def increase_score
     @score += 1
-    puts "Your got a point!"
   end
 
   def decrease_lives
     @lives -= 1
-
-    if @lives > 0
-      puts "You lost a life, #{@name}! You have #{@lives} lives."
-    end
   end
 end
 
